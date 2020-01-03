@@ -1,0 +1,28 @@
+{% extends "blog/base.html"%}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="content-section">
+    <form class="" method="post">
+      {% csrf_token %}
+      <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Join Today</legend>
+        <!-- Note: The form exists in the login view that was imported from
+        from django.contrib.auth import views as auth_views
+        The form here is not the same as the form in the register page
+        The form in the register page is the actual form dictionary we created in the views file -->
+        {{ form|crispy }}
+      </fieldset>
+      <div class="form-group">
+        <button class="btn btn-outline-info" type="submit" name="button">Login</button>
+        <small class = "text-muted ml-2">
+          <a href = "{% url 'password_reset'%}">Forgot Password?</a>
+        </small>
+      </div>
+    </form>
+    <div class="border-top pt-3">
+      <small class="text-muted">
+        <p>Need an Account? <a href="{% url 'register' %}">Sign Up</a></p>
+      </small>
+    </div>
+  </div>
+{% endblock content%}
