@@ -15,12 +15,21 @@ from django.views.generic import (
 )
 
 def home(request):
+    # context = {
+    #     'posts':Post.objects.all()
+    # }
+    #render function returns the  HttpResponse
+    #render(request,what should be linked, context (ie, the data to be displayed. Can be optional))
+    return render(request,'blog/home.html')
+
+def blog(request):
     context = {
         'posts':Post.objects.all()
     }
     #render function returns the  HttpResponse
     #render(request,what should be linked, context (ie, the data to be displayed. Can be optional))
-    return render(request,'blog/home.html',context)
+    return render(request,'blog/blog.html',context)
+
 
 class PostListView(ListView):
     model = Post
@@ -85,3 +94,10 @@ class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
 
 def about(request):
     return render(request,'blog/about.html',{'title':'About'})
+
+
+def packagelist(request):
+    return render(request, 'blog/packagelist.html',{'title': 'Packages'})
+
+def contactus(request):
+    return render(request,'blog/contact.html',{'title':'Contact Us'})

@@ -17,3 +17,10 @@ class Post(models.Model):
 # This method is for grabbing the url after the Post button is pressed
     def get_absolute_url(self):
         return reverse('post-detail', kwargs ={'pk':self.pk})
+
+
+# class Packages(models.Model):
+#     title = models.CharField(max_length = 100)
+#     image = models.ImageField(upload_to='profile_pics',null=True,blank=True)
+#     subtitle = models.TextField()
+#     author = models.ForeignKey(User, on_delete=models.CASCADE)
