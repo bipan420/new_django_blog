@@ -11,6 +11,14 @@
 
     <link rel="stylesheet" href="{% static 'blog/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'blog/main.css' %}">
+    <script src="{% static 'blog/bootstrap.min.css' %}"></script>
+    <script src="{% static 'blog/jquery.min.js' %}"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
 
     {% if title %}
         <title>Django Blog - {{title}}</title>
@@ -28,7 +36,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarToggle">
       <div class="navbar-nav mr-auto">
-        <a class="nav-item nav-link" href="{% url 'blog-myblog' %}">Home</a>
+        <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
         <a class="nav-item nav-link" href="{% url 'blog-package' %}">Package</a>
         <a class="nav-item nav-link" href="{% url 'blog-about' %}">About Us</a>
         <a class="nav-item nav-link" href="{% url 'blog-contact' %}">Contact us</a>
@@ -83,4 +91,104 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small green pt-4" style="background-color: #5f788a; color: white;">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Travel Management</h5>
+        <p>Putalisadak , Kathmandu</p>
+        <p>01-4168259 9869068059,9818596446</p>
+          <p>travel@gmail.com</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="color: white;">Home</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Packages</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">About</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Contact</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="..." style="color:white;">Travel Mgmt </a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
 </html>

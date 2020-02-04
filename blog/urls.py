@@ -12,8 +12,8 @@ from .views import (
 urlpatterns = [
 #path(path link, view to be displayed, name for the displayed view)
 # path('',views.home,name ='blog-home'),
-path('home/',views.home,name='home'),
-path('',PostListView.as_view(), name='blog-myblog'),
+path('',views.home,name='blog-home'),
+path('blog/',PostListView.as_view(), name='blog-myblog'),
 path('user/<str:username>/',UserPostListView.as_view(),name='user-posts'),
 
 path('post/<int:pk>/',PostDetailView.as_view(),name='post-detail'),

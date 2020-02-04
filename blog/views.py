@@ -34,7 +34,7 @@ def blog(request):
 class PostListView(ListView):
     model = Post
     #Default template is: appName/ModelName_viewType.html ie, blog/post_list.html
-    template_name = 'blog/home.html'
+    template_name = 'blog/blog.html'
     #By default the listView calls the list as Object List but since we called it post in the home function
     #we are going to use that
     context_object_name = 'posts'
